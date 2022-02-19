@@ -1,7 +1,12 @@
 import axios from "axios";
 import React, { useEffect } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import { useDispatch, useSelector } from "react-redux";
 import { setData } from "./stores/canvasStore";
+
+import Layout from "./layout";
+import { Home } from "./pages";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,21 +31,12 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route render={() => <Navigate to="/" />} />
+      </Routes>
+    </Layout>
   );
 }
 

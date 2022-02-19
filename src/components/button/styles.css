@@ -1,0 +1,17 @@
+.app-button {
+  border: unset;
+  border-radius: 3px;
+  padding: 4px 12px;
+  color: #e5e9ec;
+  text-transform: uppercase;
+  background-color: #2c3135;
+  transition: background 0.25s;
+  -webkit-transition: background 0.25s;
+}
+.app-button:hover {
+  cursor: pointer;
+  background-color: #4e5256;
+}
+.app-button:active {
+  background-color: #a7acb1;
+}
