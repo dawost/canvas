@@ -6,7 +6,7 @@ export const onGetRandomData = async () => {
     .then((response) => response.data)
     .catch((error) => {
       console.log("Error: ", error.response);
-      return false;
+      return { ...error.response.data };
     });
 };
 
@@ -16,6 +16,6 @@ export const onGetDataByProjectId = async (projectId) => {
     .then((response) => response.data)
     .catch((error) => {
       console.log("Error: ", error.response);
-      return false;
+      return { ...error.response.data, id: projectId };
     });
 };

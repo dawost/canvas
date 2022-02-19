@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const canvasStore = createSlice({
-  name: "canvasStore",
+  name: "canvas",
   initialState: {
-    data: [],
+    data: null,
   },
   reducers: {
     setData: (state, { payload }) => {

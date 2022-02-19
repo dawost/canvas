@@ -23,6 +23,7 @@ const Header = () => {
 
   const getRandomData = async () => {
     setIsDownloading(true);
+    if (projectIdValue) setProjectIdValue("");
 
     const randomData = await onGetRandomData();
     if (randomData) getDataByProjectId(randomData.id);
